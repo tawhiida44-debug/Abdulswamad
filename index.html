@@ -32,60 +32,64 @@
   <style>
     html { scroll-behavior: smooth; }
     body { background: #FFFAF0; overflow-x: hidden; }
-
-    /* === ENVELOPE STYLES === */
-    .envelope-wrapper { perspective: 1200px; }
-    .envelope { position: relative; width: 360px; max-width: 90vw; height: 240px; cursor: pointer; transform-style: preserve-3d; transition: all 0.6s ease; }
-    .envelope-flap {
-      position: absolute; top: 0; left: 0; width: 100%; height: 120px;
-      background: linear-gradient(180deg, #D4B76A 0%, #C9A84C 100%);
-      clip-path: polygon(0 0, 50% 100%, 100% 0);
-      transform-origin: top center;
-      transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-      z-index: 3;
-      border-bottom: 1px solid rgba(139,105,20,0.3);
-    }
-    .envelope-body {
-      position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-      background: linear-gradient(180deg, #F5EEDC 0%, #EDE4CC 100%);
-      border-radius: 4px;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.15);
-      z-index: 1;
-      border: 1px solid rgba(201,168,76,0.3);
-    }
-    .envelope-pocket {
-      position: absolute; bottom: 0; left: 0; width: 100%; height: 120px;
-      background: linear-gradient(0deg, #E8D9B5 0%, #F5EEDC 100%);
-      z-index: 2;
-    }
-    .invitation-card {
-      position: absolute; left: 5%; top: 100%; width: 90%; min-height: 200px;
-      background: #FFFAF0;
-      border: 1px solid #C9A84C;
-      border-radius: 4px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-      padding: 2rem 1.5rem;
-      opacity: 0;
-      transform: translateY(30px);
-      transition: all 0.8s ease 0.3s;
-      z-index: 0;
-    }
-    .envelope-opened .envelope-flap { transform: rotateX(180deg); }
-    .envelope-opened .invitation-card {
-      opacity: 1;
-      transform: translateY(-180px);
-      z-index: 5;
-    }
-    .seal {
-      position: absolute; top: 50px; left: 50%; transform: translateX(-50%);
-      width: 48px; height: 48px; background: linear-gradient(135deg, #B8860B, #DAA520);
-      border-radius: 50%; display: flex; align-items: center; justify-content: center;
-      color: white; font-weight: bold; font-size: 1.2rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.25);
-      transition: opacity 0.4s ease;
-      z-index: 4;
-    }
-    .envelope-opened .seal { opacity: 0; }
+  
+    /* === ENVELOPE STYLES - BIG VERSION === */
+.envelope-wrapper { 
+  perspective: 1200px; 
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.envelope { 
+  position: relative; 
+  width: min(92vw, 680px); 
+  height: 440px; 
+  cursor: pointer; 
+  transform-style: preserve-3d; 
+  transition: all 0.6s ease; 
+}
+.envelope-flap {
+  position: absolute; top: 0; left: 0; width: 100%; height: 220px; 
+  background: linear-gradient(180deg, #D4B76A 0%, #C9A84C 100%);
+  clip-path: polygon(0 0, 50% 100%, 100% 0);
+  transform-origin: top center;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 3;
+  border-bottom: 1px solid rgba(139,105,20,0.3);
+}
+.envelope-pocket {
+  position: absolute; bottom: 0; left: 0; width: 100%; height: 220px; 
+  background: linear-gradient(0deg, #E8D9B5 0%, #F5EEDC 100%);
+  z-index: 2;
+}
+.invitation-card {
+  position: absolute; left: 4%; top: 100%; width: 92%; min-height: 320px;
+  background: #FFFAF0;
+  border: 1px solid #C9A84C;
+  border-radius: 6px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  padding: 2.5rem 2rem;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease 0.3s;
+  z-index: 0;
+}
+.envelope-opened .invitation-card {
+  opacity: 1;
+  transform: translateY(-320px); 
+  z-index: 5;
+}
+.seal {
+  position: absolute; top: 150px; 
+  left: 50%; transform: translateX(-50%);
+  width: 84px; height: 84px; 
+  background: linear-gradient(135deg, #B8860B, #DAA520);
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  color: white; font-weight: bold; font-size: 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+  transition: opacity 0.4s ease;
+  z-index: 4;
+}
 
     /* === PARALLAX === */
     .parallax-container { position: relative; z-index: 10; }
@@ -297,12 +301,7 @@
       </div>
     </section>
 
-    <!-- Share -->
-    <section class="py-8 px-6 text-center section-reveal">
-      <button onclick="shareInvite()" class="bg-gold/20 border border-gold text-emerald px-6 py-3 rounded-full hover:bg-gold/30 transition">
-        <i class="fa fa-share-alt mr-2"></i> Share This Invitation
-      </button>
-    </section>
+    
 
     <!-- Footer -->
     <footer class="py-10 text-center px-6 text-emerald/70 text-sm section-reveal">
