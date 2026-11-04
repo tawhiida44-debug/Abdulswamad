@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nuria & Abdulswamad Hemed — Nikah Invitation</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  html{scroll-behavior:smooth}
+  body{background:#EDE3D9;overflow-x:hidden;font-family:'Cormorant Garamond',serif}
+  .font-vibes{font-family:'Great Vibes',cursive}
+  .font-amiri{font-family:'Amiri',serif}
+  .font-cinzel{font-family:'Cinzel',serif}
+
+  /* ===== IVORY LUXURY GATEFOLD ===== */
+  .ivory-door{
+    background: linear-gradient(135deg, #FDF8F0 0%, #F5EAD8 40%, #EFE0C8 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  .ivory-door::before{
+    content:'';
+    position:absolute; inset:0;
+    background-image:
+      radial-gradient(circle at 18% 18%, rgba(212,175,122,.28) 0 22px, transparent 23px),
+      radial-gradient(circle at 82% 22%, rgba(212,175,122,.22) 0 18px, transparent 19px),
+      radial-gradient(circle at 25% 80%, rgba(212,175,122,.20) 0 20px, transparent 21px),
+      radial-gradient(circle at 80% 78%, rgba(212,175,122,.25) 0 24px, transparent 25px);
+  }
+  .ivory-door::after{
+    content:'';
+    position:absolute; inset:0;
+    background: linear-gradient(180deg, rgba(255,255,255,.6), transparent 25%, transparent 75%, rgba(180,145,90,.12));
+  }
+  .satin-ivory{
+    background: linear-gradient(180deg, #FFFCF5 0%, #F9EFDA 45%, #EFDDBB 100%);
+    box-shadow: 0 6px 22px rgba(0,0,0,.18), inset 0 1px 0 rgba(255,255,255,1);
+  }
+  .emboss-flower{
+    text-shadow: 0 1px 0 rgba(255,255,255,.9), 0 -1px 1px rgba(180,145,90,.3);
+    opacity:.85;
+  }
+  #doorL,#doorR{transition:transform 1.5s cubic-bezier(.4,0,.2,1)}
+  #ribbon{transition:all .8s ease}
+  #gateOverlay{transition:opacity .9s ease}
+  .reveal{opacity:0;transform:translateY(24px);transition:all .9s ease}
+  .reveal.show{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+
+<!-- AUDIO -->
+<audio id="nasheedAudio" loop preload="auto">
+  <source src="nasheed.mp3" type="audio/mpeg">
+</audio>
+<button id="musicBtn" class="fixed top-4 right-4 z-[200] w-11 h-11 rounded-full bg-white/90 shadow-lg flex items-center justify-center text-xl">🎵</button>
+
+<!-- ===== IVORY LUXURY GATEFOLD - LIKE YOUR NEW PHOTO ===== -->
+<div id="gateOverlay" class="fixed inset-0 z-[100] flex items-center justify-center bg-[#1A1212] px-4">
+  <div id="gateEnv" class="relative w-full max-w-[430px] h-[640px] cursor-pointer" style="perspective:1600px">
+
+    <!-- INNER CARD -->
+    <div class="absolute inset-0 bg-[#FFFBF5] rounded-[4px] shadow-2xl flex flex-col items-center justify-center text-center p-8 overflow-hidden">
+      <div class="absolute top-0 left-0 w-full h-[4px] bg-gradient-to-r from-[#C9A84C] via-[#F5E6B8] to-[#C9A84C]"></div>
+      <div class="absolute top-3 left-3 text-3xl opacity-60"></div>
+      <div class="absolute top-3 right-3 text-3xl opacity-60"></div>
+      <div class="absolute bottom-3 left-3 text-3xl opacity-60"></div>
+      <div class="absolute bottom-3 right-3 text-3xl opacity-60"></div>
+      <p class="font-amiri text-[#B08D57]">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+      <p class="tracking-[0.45em] text-[11px] mt-6 text-[#8A6A6A]">THE NIKAH OF</p>
+      <h1 class="font-vibes text-[60px] leading-[1.02] text-[#4A2C2C] mt-2">Nuria<br>&<br>Abdulswamad<br>Hemed</h1>
+      <div class="w-20 h-px bg-[#C9A84C] my-4"></div>
+      <p class="tracking-[0.28em] text-[12px]">27 DECEMBER 2026<br>NJORO MASJID</p>
+      <p class="text-[11px] tracking-widest text-gray-400 mt-6">TAP TO CONTINUE ↓</p>
+    </div>
+
+    <!-- LEFT DOOR - IVORY EMBOSSED -->
+    <div id="doorL" class="ivory-door absolute top-0 left-0 w-1/2 h-full z-[3] origin-left shadow-2xl">
+      <span class="emboss-flower absolute top-[6%] left-[12%] text-[42px]"></span>
+      <span class="emboss-flower absolute top-[18%] left-[28%] text-[28px]"></span>
+      <span class="emboss-flower absolute top-[2%] left-[45%] text-[22px]"></span>
+      <span class="emboss-flower absolute bottom-[12%] left-[10%] text-[38px]"></span>
+      <span class="emboss-flower absolute bottom-[28%] left-[30%] text-[24px]"></span>
+      <span class="emboss-flower absolute top-[40%] left-[8%] text-[26px] opacity-50"></span>
+      <span class="emboss-flower absolute top-[55%] left-[18%] text-[20px]"></span>
+      <div class="absolute right-0 top-0 h-full w-[2px] bg-[#C9A84C]/60"></div>
+    </div>
+
+    <!-- RIGHT DOOR - IVORY EMBOSSED -->
+    <div id="doorR" class="ivory-door absolute top-0 right-0 w-1/2 h-full z-[3] origin-right shadow-2xl">
+      <span class="emboss-flower absolute top-[6%] right-[12%] text-[42px]"></span>
+      <span class="emboss-flower absolute top-[18%] right-[28%] text-[28px]"></span>
+      <span class="emboss-flower absolute top-[2%] right-[45%] text-[22px]"></span>
+      <span class="emboss-flower absolute bottom-[12%] right-[10%] text-[38px]"></span>
+      <span class="emboss-flower absolute bottom-[28%] right-[30%] text-[24px]"></span>
+      <span class="emboss-flower absolute top-[40%] right-[8%] text-[26px] opacity-50"></span>
+      <span class="emboss-flower absolute top-[55%] right-[18%] text-[20px]"></span>
+      <div class="absolute left-0 top-0 h-full w-[2px] bg-[#C9A84C]/60"></div>
+    </div>
+
+    <!-- IVORY SATIN RIBBON + BIG SATIN BOW -->
+    <div id="ribbon" class="absolute top-1/2 left-0 w-full h-[62px] -translate-y-1/2 z-[5] flex items-center justify-center">
+      <div class="satin-ivory absolute inset-0"></div>
+      <svg class="relative z-10 w-[170px] h-[110px] drop-shadow-[0_10px_18px_rgba(0,0,0,0.25)]" viewBox="0 0 180 110">
+        <defs>
+          <linearGradient id="satin" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#FFFEFA"/>
+            <stop offset="45%" stop-color="#F9EFDA"/>
+            <stop offset="100%" stop-color="#E8D5AE"/>
+          </linearGradient>
+        </defs>
+        <path d="M90 55 L18 18 Q4 28 12 45 Q20 58 88 58 Z" fill="url(#satin)" stroke="#D9C49A" stroke-width="1"/>
+        <path d="M88 55 L30 38 Q45 48 88 58 Z" fill="#FFFFFF" opacity="0.5"/>
+        <path d="M90 55 L162 18 Q176 28 168 45 Q160 58 92 58 Z" fill="url(#satin)" stroke="#D9C49A" stroke-width="1"/>
+        <path d="M92 55 L150 38 Q135 48 92 58 Z" fill="#FFFFFF" opacity="0.5"/>
+        <path d="M90 55 L72 92 Q88 100 90 78 Z" fill="url(#satin)" stroke="#D9C49A" stroke-width="1"/>
+        <path d="M90 55 L108 92 Q92 100 90 78 Z" fill="#EFDDBB" stroke="#D9C49A" stroke-width="1"/>
+        <ellipse cx="90" cy="56" rx="14" ry="12" fill="#FFFDF6" stroke="#D9C49A" stroke-width="1"/>
+        <ellipse cx="90" cy="56" rx="7" ry="6" fill="#F5EAD8"/>
+      </svg>
+      <div class="absolute -bottom-8 left-1/2 -translate-x-1/2 z-10 bg-[#FFFBF5] px-5 py-1.5 rounded-full shadow-lg border border-[#EFDDBB]">
+        <span class="text-[10px] tracking-[0.4em] text-[#6B4A4A]">TAP TO OPEN</span>
+      </div>
+    </div>
+
+    <p class="absolute -bottom-9 left-1/2 -translate-x-1/2 whitespace-nowrap text-[10px] tracking-[0.4em] text-white/80">NURIA & ABDULSWAMAD HEMED</p>
+  </div>
+</div>
+
+<!-- ===== MAIN INVITATION ===== -->
+<main id="mainContent" class="opacity-0 transition-opacity duration-700 max-w-[520px] mx-auto bg-[#FFFBF5] min-h-screen shadow-2xl">
+
+  <section class="text-center px-6 pt-12 pb-8 relative overflow-hidden">
+    <div class="absolute top-0 left-0 text-5xl opacity-40"></div>
+    <div class="absolute top-0 right-0 text-5xl opacity-40"></div>
+    <p class="font-amiri text-[#B08D57]">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+    <p class="text-[11px] tracking-[0.4em] mt-6 text-[#8A6A6A]">WITH THE BLESSINGS OF ALLAH</p>
+    <h1 class="font-vibes text-[64px] leading-[1] text-[#4A2C2C] mt-4">Nuria<br>&<br>Abdulswamad Hemed</h1>
+    <p class="font-cinzel tracking-[0.3em] text-sm mt-4">27 . 12 . 2026</p>
+    <p class="text-sm text-gray-500 mt-1">Njoro Masjid • Njoro, Kenya</p>
+    <div class="w-20 h-px bg-[#C9A84C] mx-auto my-6"></div>
+    <p class="text-[15px] leading-relaxed text-gray-600 italic">"And We created you in pairs"<br><span class="not-italic text-xs text-[#B08D57]">— Surah An-Naba 78:8</span></p>
+  </section>
+
+  <section class="px-6 py-6">
+    <div class="bg-[#F9F0DC] rounded-2xl p-5 text-center border border-[#EFDDBB]">
+      <p class="text-[11px] tracking-[0.3em] text-[#8A6A6A]">COUNTING DOWN TO OUR DAY</p>
+      <div class="grid grid-cols-4 gap-2 mt-4">
+        <div class="bg-white rounded-xl py-3"><div id="dDays" class="text-2xl font-semibold">00</div><div class="text-[10px] tracking-widest">DAYS</div></div>
+        <div class="bg-white rounded-xl py-3"><div id="dHours" class="text-2xl font-semibold">00</div><div class="text-[10px] tracking-widest">HOURS</div></div>
+        <div class="bg-white rounded-xl py-3"><div id="dMins" class="text-2xl font-semibold">00</div><div class="text-[10px] tracking-widest">MINS</div></div>
+        <div class="bg-white rounded-xl py-3"><div id="dSecs" class="text-2xl font-semibold">00</div><div class="text-[10px] tracking-widest">SECS</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="px-6 py-4 space-y-4">
+    <div class="reveal bg-white border border-[#EFDDBB] rounded-2xl p-5 flex gap-4 items-start">
+      <span class="text-2xl"></span>
+      <div><h3 class="font-cinzel text-sm tracking-widest">NIKAH CEREMONY</h3><p class="text-sm text-gray-600 mt-1">Sunday, 27 December 2026<br>10:00 AM • Njoro Masjid, Njoro</p></div>
+    </div>
+    <div class="reveal bg-white border border-[#EFDDBB] rounded-2xl p-5 flex gap-4 items-start">
+      <span class="text-2xl"></span>
+      <div><h3 class="font-cinzel text-sm tracking-widest">RECEPTION</h3><p class="text-sm text-gray-600 mt-1">After Nikah • Celebration<br>Family & Friends Welcome</p></div>
+    </div>
+    <div class="reveal bg-white border border-[#EFDDBB] rounded-2xl p-5 flex gap-4 items-start">
+      <span class="text-2xl"></span>
+      <div><h3 class="font-cinzel text-sm tracking-widest">DRESS CODE</h3><p class="text-sm text-gray-600 mt-1">Modest •<br>Please dress elegantly</p></div>
+    </div>
+  </section>
+
+  <section class="px-6 py-8 text-center">
+    <h2 class="font-vibes text-[42px] text-[#4A2C2C]">Will you join us?</h2>
+    <p class="text-sm text-gray-500">Please confirm by 1st December 2026</p>
+    <div class="flex gap-3 justify-center mt-5">
+      <button onclick="rsvp('Yes, I will attend')" class="bg-[#4A2C2C] text-white px-6 py-3 rounded-full text-sm">Yes, I'll Be There 🤍</button>
+      <button onclick="rsvp('Sorry, I cannot make it')" class="bg-white border border-[#EFDDBB] px-6 py-3 rounded-full text-sm">Can't Make It</button>
+    </div>
+    <p class="text-xs text-gray-400 mt-6">Nuria & Abdulswamad Hemed • Made with love</p>
+  </section>
+</main>
+
+<script>
+const overlay=document.getElementById('gateOverlay');
+const doorL=document.getElementById('doorL');
+const doorR=document.getElementById('doorR');
+const ribbon=document.getElementById('ribbon');
+const gateEnv=document.getElementById('gateEnv');
+const main=document.getElementById('mainContent');
+const audio=document.getElementById('nasheedAudio');
+const musicBtn=document.getElementById('musicBtn');
+let opened=false;
+
+function openGate(){
+  if(opened) return; opened=true;
+  ribbon.style.opacity='0';
+  ribbon.style.transform='translateY(-50%) scale(1.6) rotate(10deg)';
+  setTimeout(()=>{ doorL.style.transform='rotateY(-108deg)'; doorR.style.transform='rotateY(108deg)'; },350);
+  if(audio) audio.play().catch(()=>{});
+  musicBtn.textContent='';
+  setTimeout(()=>{
+    overlay.style.opacity='0';
+    main.style.opacity='1';
+    setTimeout(()=>{ overlay.style.display='none'; document.querySelectorAll('.reveal').forEach((el,i)=>setTimeout(()=>el.classList.add('show'), i*150)); },900);
+  },2100);
+}
+gateEnv.addEventListener('click', openGate);
+
+musicBtn.addEventListener('click',(e)=>{
+  e.stopPropagation();
+  if(audio.paused){ audio.play(); musicBtn.textContent=''; }
+  else{ audio.pause(); musicBtn.textContent='🎵'; }
+});
+
+function rsvp(msg){
+  const text=encodeURIComponent(`Assalamu alaikum! ${msg} — Nikah of Nuria & Abdulswamad Hemed on 27 Dec at Njoro Masjid.`);
+  window.open(`https://wa.me/254700000000?text=${text}`,'_blank');
+}
+
+const target=new Date('2026-12-27T10:00:00+03:00').getTime();
+function tick(){
+  const diff=target-Date.now(); if(diff<0) return;
+  const d=Math.floor(diff/86400000), h=Math.floor(diff%86400000/3600000), m=Math.floor(diff%3600000/60000), s=Math.floor(diff%60000/1000);
+  document.getElementById('dDays').textContent=String(d).padStart(2,'0');
+  document.getElementById('dHours').textContent=String(h).padStart(2,'0');
+  document.getElementById('dMins').textContent=String(m).padStart(2,'0');
+  document.getElementById('dSecs').textContent=String(s).padStart(2,'0');
+}
+setInterval(tick,1000); tick();
+</script>
+</body>
+</html>
